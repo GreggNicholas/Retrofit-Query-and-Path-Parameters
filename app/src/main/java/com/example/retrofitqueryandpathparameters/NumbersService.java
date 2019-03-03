@@ -6,7 +6,7 @@ import retrofit2.http.Path;
 
 public interface NumbersService {
 
-    String ENDPOINT = "NumberPath/math?json";
+    String ENDPOINT = "{numInput}/math?json";
 
     @GET(ENDPOINT)
     Call<NumberModel> getNumbers(@Path("numInput") String numInput);
