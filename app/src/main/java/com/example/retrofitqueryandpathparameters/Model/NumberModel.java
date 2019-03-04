@@ -1,4 +1,4 @@
-package com.example.retrofitqueryandpathparameters;
+package com.example.retrofitqueryandpathparameters.Model;
 
 public class NumberModel {
     private String text;

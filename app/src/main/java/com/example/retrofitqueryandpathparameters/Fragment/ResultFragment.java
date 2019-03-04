@@ -1,4 +1,4 @@
-package com.example.retrofitqueryandpathparameters;
+package com.example.retrofitqueryandpathparameters.Fragment;
 
 
 import android.content.Context;
@@ -11,6 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.retrofitqueryandpathparameters.Model.NumberModel;
+import com.example.retrofitqueryandpathparameters.R;
+import com.example.retrofitqueryandpathparameters.Service.NumbersService;
+import com.example.retrofitqueryandpathparameters.Service.RetrofitSingleton;
 
 import retrofit2.Call;
 import retrofit2.Callback;

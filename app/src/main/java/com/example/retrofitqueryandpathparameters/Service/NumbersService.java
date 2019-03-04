@@ -1,4 +1,6 @@
-package com.example.retrofitqueryandpathparameters;
+package com.example.retrofitqueryandpathparameters.Service;
+
+import com.example.retrofitqueryandpathparameters.Model.NumberModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

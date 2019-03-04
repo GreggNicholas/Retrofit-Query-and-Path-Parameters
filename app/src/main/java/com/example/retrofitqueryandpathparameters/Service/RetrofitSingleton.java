@@ -1,4 +1,4 @@
-package com.example.retrofitqueryandpathparameters;
+package com.example.retrofitqueryandpathparameters.Service;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
