@@ -28,11 +28,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String getNumInput = editText.getText().toString();
 
+                ResultFragment resultFragment = ResultFragment.getInstance(getNumInput);
+
+
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragcontainer_main, ResultFragment.getInstance())
+                        .replace(R.id.fragcontainer_main, resultFragment)
                         .addToBackStack(null)
                         .commit();
+
             }
         });
 

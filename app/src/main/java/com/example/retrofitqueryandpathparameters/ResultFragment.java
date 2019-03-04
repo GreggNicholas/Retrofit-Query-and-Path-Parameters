@@ -24,15 +24,16 @@ import retrofit2.Retrofit;
 public class ResultFragment extends Fragment {
     private static final String TAG = "ResultFragment";
     private static final String NUM_KEY = "Params1";
-    private static String userNumInput;
+    private String userNumInput;
 
     public ResultFragment() {
     }
 
-    public static ResultFragment getInstance() {
+    public static ResultFragment getInstance(String userInput) {
         ResultFragment resultFragment = new ResultFragment();
         Bundle args = new Bundle();
-        args.putString(NUM_KEY, userNumInput);
+        args.putString(NUM_KEY, userInput);
+        resultFragment.setArguments(args);
         return resultFragment;
     }
 
@@ -40,7 +41,7 @@ public class ResultFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if(getArguments() != null){
+        if (getArguments() != null) {
             userNumInput = getArguments().getString(NUM_KEY);
         }
     }
@@ -62,8 +63,8 @@ public class ResultFragment extends Fragment {
         getNumberCall.enqueue(new Callback<NumberModel>() {
             @Override
             public void onResponse(Call<NumberModel> call, Response<NumberModel> response) {
-                Log.d(TAG, "onResponse: " + response.body().getNumberFacts());
-                userInputTextView.setText(response.body().getNumberFacts());
+                Log.d(TAG, "onResponse: " + response.body().getNumberFactsResponse());
+                userInputTextView.setText(response.body().getNumberFactsResponse());
             }
 
             @Override
