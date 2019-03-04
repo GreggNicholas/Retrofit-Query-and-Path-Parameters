@@ -13,8 +13,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
-    private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +26,17 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String getNumInput = editText.getText().toString();
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragcontainer_main, ResultFragment.getInstance())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
 
     }
-
-
 
 
 }

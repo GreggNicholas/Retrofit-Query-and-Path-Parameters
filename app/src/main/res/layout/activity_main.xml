@@ -31,4 +31,11 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <FrameLayout
+        android:id="@+id/fragcontainer_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>
