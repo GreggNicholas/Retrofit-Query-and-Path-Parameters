@@ -33,9 +33,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <FrameLayout
+
         android:id="@+id/fragcontainer_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="132dp"
+        android:layout_marginBottom="232dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
     </FrameLayout>
 
